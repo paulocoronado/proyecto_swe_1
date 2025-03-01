@@ -1,1 +1,18 @@
-#map { height: 100%; }
+#map { height: 50%; }
+
+.btnDiv{
+
+    position: absolute;
+    top:20px;
+    left: 100px;
+    z-index:1000;
+}
+
+.button{
+
+    height: 40px;
+    width: 250px;
+    font-size: 20px;
+    color: white;
+    background-color: brown;
+}
