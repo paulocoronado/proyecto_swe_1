@@ -25,3 +25,28 @@ async function loadPolygon() {
 }
 
 loadPolygon();
+
+let btnTrees= document.getElementById("btnTrees");
+
+btnTrees.addEventListener('click',  async function(){
+//    try{
+
+        let response= await fetch("arboles.geojson");
+        let data = await response.json();
+
+        console.log(data);
+
+        L.geoJSON(data, {
+            pointToLayer: (feature, latlng)=>{
+                return L.circleMarker(latlng)
+            }
+        }
+           
+        ).addTo(map);
+
+        
+ //   }
+ //   catch(error){
+ //       console.error("Can´t load")
+ //   }
+});
